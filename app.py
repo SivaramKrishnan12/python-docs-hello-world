@@ -1,31 +1,31 @@
 from flask import Flask
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    return "Hello, World!"
-
-# import numpy as np
-# from flask import Flask, request, jsonify, render_template, json, Response, redirect, flash
-# import pickle
-# from config import Config
-# from forms import Pedestrian_prediction_Form 
-# from datetime import datetime, timedelta
-# from sklearn.preprocessing import StandardScaler
-# import os
-
-# class Config(object):
-#     SECRET_KEY =  os.environ.get('SECRET_KEY') or "secret_string"
-
 # app = Flask(__name__)
-# app.config.from_object(Config)
-# #model = pickle.load(open('model.pkl', 'rb'))
 
 # @app.route("/")
-# @app.route("/index")
-# @app.route("/home")
-# def index():
-#     return render_template("index.html", index = True)
+# def hello():
+#     return "Hello, World!"
+
+import numpy as np
+from flask import Flask, request, jsonify, render_template, json, Response, redirect, flash
+import pickle
+from config import Config
+from forms import Pedestrian_prediction_Form 
+from datetime import datetime, timedelta
+from sklearn.preprocessing import StandardScaler
+import os
+
+class Config(object):
+    SECRET_KEY =  os.environ.get('SECRET_KEY') or "secret_string"
+
+app = Flask(__name__)
+app.config.from_object(Config)
+# #model = pickle.load(open('model.pkl', 'rb'))
+
+@app.route("/")
+@app.route("/index")
+@app.route("/home")
+def index():
+    return render_template("index.html", index = True)
 
 # @app.route("/Pedestrian_forecast")
 # def Pedestrian_forecast():
