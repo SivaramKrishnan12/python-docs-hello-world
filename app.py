@@ -5,20 +5,20 @@ from flask import Flask
 # def hello():
 #     return "Hello, World!"
 
-import numpy as np
-from flask import Flask, request, jsonify, render_template, json, Response, redirect, flash
-import pickle
-from config import Config
-from forms import Pedestrian_prediction_Form 
-from datetime import datetime, timedelta
+# import numpy as np
+# from flask import Flask, request, jsonify, render_template, json, Response, redirect, flash
+# import pickle
+# from config import Config
+# from forms import Pedestrian_prediction_Form 
+# from datetime import datetime, timedelta
 # from sklearn.preprocessing import StandardScaler
 import os
 
-class Config(object):
-    SECRET_KEY =  os.environ.get('SECRET_KEY') or "secret_string"
+# class Config(object):
+#     SECRET_KEY =  os.environ.get('SECRET_KEY') or "secret_string"
 
 app = Flask(__name__)
-app.config.from_object(Config)
+# app.config.from_object(Config)
 # #model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route("/")
