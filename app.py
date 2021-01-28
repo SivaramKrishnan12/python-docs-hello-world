@@ -11,7 +11,7 @@ import pickle
 from config import Config
 from forms import Pedestrian_prediction_Form 
 from datetime import datetime, timedelta
-from sklearn.preprocessing import StandardScaler
+# from sklearn.preprocessing import StandardScaler
 import os
 
 class Config(object):
